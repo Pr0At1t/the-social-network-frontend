@@ -1,11 +1,10 @@
 import 'react-native';
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { mockComponent } from '../../../../testUtils';
 import Login from '../../../../src/components/login/index';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
-describe('src/components/login', function() {
+import renderer from 'react-test-renderer';
+
+describe('src/components/login/login_form', function() {
     describe('#render', () => {
         it('renders correctly', () => {
             const tree = renderer.create(<Login />).toJSON();

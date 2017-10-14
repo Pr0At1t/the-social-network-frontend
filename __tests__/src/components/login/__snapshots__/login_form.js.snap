@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`src/components/login #render renders correctly 1`] = `
+exports[`src/components/login/login_form #render renders correctly 1`] = `
 <RCTScrollView
   automaticallyAdjustContentInsets={false}
   contentContainerStyle={

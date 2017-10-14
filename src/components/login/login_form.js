@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     input: {
         height: 40,
         backgroundColor: 'rgba(255, 255, 255, 0.2)',
-        marginBottom: 20,
+        marginBottom: 15,
         color: '#FFF',
         paddingHorizontal: 10
     },
@@ -26,6 +26,8 @@ const styles = StyleSheet.create({
     buttonText: {
         textAlign: 'center',
         color: '#FFFFFF'
+        color: '#FFFFFF',
+        fontWeight: '700'
     }
 });
 
@@ -42,6 +44,7 @@ export default class LoginForm extends Component {
                     style={styles.input}
                     placeholder="password"
                     placeholderTextColor="rgba(255, 255, 255, 0.7)"
+                    secureTextEntry
                 />
                 <TouchableOpacity style={styles.buttonContainer}>
                     <Text style={styles.buttonText}>LOGIN</Text>

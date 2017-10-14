@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import LoginForm from './login_form';
 
 const styles = StyleSheet.create({
@@ -12,9 +13,14 @@ const styles = StyleSheet.create({
 export default class Login extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            <KeyboardAwareScrollView
+                style={{ backgroundColor: styles.container.backgroundColor }}
+                resetScrollToCoords={{ x: 0, y: 0 }}
+                contentContainerStyle={styles.container}
+                scrollEnabled={false}
+            >
                 <LoginForm />
-            </View>
+            </KeyboardAwareScrollView>
         );
     }
 }

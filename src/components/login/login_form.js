@@ -38,6 +38,7 @@ export default class LoginForm extends Component {
                     style={styles.input}
                     placeholder="username or email"
                     placeholderTextColor="rgba(255, 255, 255, 0.7)"
+                    autoCapitalize="none"
                 />
                 <TextInput
                     style={styles.input}

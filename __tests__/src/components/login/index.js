@@ -1,7 +1,6 @@
 import 'react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { mockComponent } from '../../../../testUtils';
 import Login from '../../../../src/components/login/index';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 

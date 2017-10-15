@@ -1,30 +1,21 @@
-import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { AppRegistry } from 'react-native';
+import { createStore, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
 import Login from './src/components/login/index';
+import userReducer from './src/reducers/user';
 
-export default class client extends Component {
-    render() {
-        return <Login />;
-    }
-}
+const store = createStore(
+    combineReducers({ userReducer }),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF'
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5
-    }
-});
+const App = () => <Login />;
+
+const client = () => (
+    <Provider store={store}>
+        <App />
+    </Provider>
+);
 
 AppRegistry.registerComponent('client', () => client);

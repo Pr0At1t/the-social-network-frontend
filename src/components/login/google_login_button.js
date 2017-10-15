@@ -13,9 +13,6 @@ const styles = StyleSheet.create({
       color: '#D83B3B',
       fontWeight: '700',
       fontSize: 18
-   },
-   hr: {
-      marginBottom: 100
    }
 });
 

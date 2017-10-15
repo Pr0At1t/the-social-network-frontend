@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import {
-   View,
-   StyleSheet,
-   TextInput,
-   TouchableOpacity,
-   Text
-} from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
 
 const styles = StyleSheet.create({
    googleButton: {
@@ -33,14 +27,6 @@ export default class GoogleLoginButton extends Component {
                <Text style={styles.buttonText}>Sign in with Google</Text>
             </TouchableOpacity>
          </View>
-         /* <View>
-            <TextInput
-               style={styles.input}
-               placeholder="Sign in with Google"
-               placeholderTextColor="#D83B3B"
-               autoCapitalize="none"
-            />
-         </View> */
       );
    }
 }

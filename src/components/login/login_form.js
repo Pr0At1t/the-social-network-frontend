@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, StyleSheet, TextInput, TouchableOpacity, Text } from 'react-native';
+import {
+    View,
+    StyleSheet,
+    TextInput,
+    TouchableOpacity,
+    Text,
+    Image,
+    Linking,
+    Platform
+} from 'react-native';
 import { connect } from 'react-redux';
 import Hr from 'react-native-hr';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import SafariView from 'react-native-safari-view';
 import GoogleLoginButton from './google_login_button';
 import login from '../../action_creators/login';
 

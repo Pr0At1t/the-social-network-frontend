@@ -13,7 +13,7 @@ const store = createStore(
 
 const client = () => (
     <Provider store={store}>
-        <App />
+        <Login />
     </Provider>
 );
 

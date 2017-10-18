@@ -69,36 +69,6 @@ const App = React.createClass({
         };
     },
 
-    // Set up Linking
-    componentDidMount() {
-        // Add event listener to handle OAuthLogin:// URLs
-        Linking.addEventListener('url', this.handleOpenURL);
-        // Launched from an external URL
-        Linking.getInitialURL().then((url) => {
-            if (url) {
-                this.handleOpenURL({ url });
-            }
-        });
-    },
-
-    componentWillUnmount() {
-        // Remove event listener
-        Linking.removeEventListener('url', this.handleOpenURL);
-    },
-
-    handleOpenURL({ url }) {
-        // Extract stringified user string out of the URL
-        const [, userString] = url.match(/user=([^#]+)/);
-        console.log(JSON.parse(decodeURI(userString)));
-        this.setState({
-            // Decode the user string and parse it into JSON
-            user: JSON.parse(decodeURI(userString))
-        });
-        if (Platform.OS === 'ios') {
-            SafariView.dismiss();
-        }
-    },
-
     // // Handle Login with Facebook button tap
     // loginWithFacebook = () => this.openURL('http://localhost:3000/auth/facebook');
 

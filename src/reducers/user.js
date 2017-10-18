@@ -15,12 +15,12 @@ const initialState = {
 */
 const userReducer = (state, action) => {
     switch (action.type) {
-    case Actions.LOGIN_SUCCESS:
-    case Actions.LOGIN_ERROR:
+    case Actions.GOOGLE_LOGIN_SUCCESS:
         return {
             ...state,
             user: {
-                loggedIn: !state.user.loggedIn
+                rawData: action.userData,
+                loggedIn: true
             }
         };
     default:

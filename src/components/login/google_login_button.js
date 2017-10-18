@@ -62,7 +62,6 @@ class GoogleLoginButton extends Component {
         this.props.receiveUserData({
             userData: JSON.parse(decodeURI(userString))
         });
-        console.log(JSON.parse(decodeURI(userString)));
         if (Platform.OS === 'ios') {
             SafariView.dismiss();
         }
